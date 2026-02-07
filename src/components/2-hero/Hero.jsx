@@ -52,11 +52,13 @@ const Hero = () => {
             />
 
             <a className="icon icon-twitter" href="#" />
-            <a className="icon icon-github"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/Asser-wael" />
-            <a className="icon icon-linkedin" href="#" />
+            <a
+              className="icon icon-twitter"
+              href="#"
+              aria-label="Twitter"
+            />
+            <a className="icon icon-linkedin" href="#" aria-label="LinkedIn" />
+
           </div>
         </motion.div>
 
