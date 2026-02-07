@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import './Services.css';
 const servicesData = [
     {
@@ -14,9 +15,20 @@ const servicesData = [
     },
 ];
 
-
 const Services = () => {
     return (
+        <>
+         <Helmet>
+                <title>خدماتنا | Asser Wael Portfolio</title>
+                <meta
+                  name="description"
+                  content="تعرف على خدمات Asser Wael: تطوير مواقع حديثة، تصميم واجهات مستخدم وتجربة مستخدم، وتحسين SEO."
+                />
+                <meta property="og:title" content="خدمات Asser Wael" />
+                <meta property="og:description" content="Web Development, UI/UX Design, SEO Optimization." />
+                <meta property="og:image" content="/services-preview.png" />
+            </Helmet>
+
         <div className="services-container">
             <h2 className="services-title">Our Services</h2>
 
@@ -30,6 +42,7 @@ const Services = () => {
                 ))}
             </div>
         </div>
+                </>
     );
 };
 

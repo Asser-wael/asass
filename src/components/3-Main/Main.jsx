@@ -1,7 +1,7 @@
 import './Main.css';
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-
+import { Helmet } from 'react-helmet-async';
 // استيراد جميع الصور من مجلد src
 import imgi from "./download (1).jpg";
 import imgii from "./11f3ac83-7b34-446d-941c-73763a295e82.jpg";
@@ -88,46 +88,51 @@ const Main = () => {
     }
   ];
 
-  const [Active, setActive] = useState("all");
   const [animate, setAnimate] = useState(false);
 
-  const filteredProjects =
-    Active === "all" ? projects : projects.filter((project) => project.category === Active);
 
-  useEffect(() => {
-    setAnimate(true);
-    const timer = setTimeout(() => setAnimate(false), 500);
-    return () => clearTimeout(timer);
-  }, [Active]);
 
   return (
-    <main>
-      <div className='r-section'>
-        {filteredProjects.map((project, index) => (
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            className={`card ${animate ? "animate" : ""}`}
-            key={index}
-          >
-            <div className='img'>
-              <img src={project.img} alt={project.title} />
-            </div>
-            <h3>{project.title}</h3>
-            <p>{project.subtitle}</p>
-            <div className='Git-link-more'>
-              <div>
-                <a href={project.link}><span className='icon-link'></span></a>
-                <a href={project.github}><span className='icon-github'></span></a>
+    <>
+     <Helmet>
+        <title>المشاريع | Asser Wael Portfolio</title>
+        <meta
+          name="description"
+          content="استعرض أحدث مشاريع Asser Wael في تطوير الويب باستخدام React, Node, و CSS."
+        />
+        <meta property="og:title" content="مشاريع Asser Wael" />
+        <meta property="og:description" content="نماذج من أعمالي في تصميم مواقع حديثة وتطبيقات ويب." />
+        <meta property="og:image" content="/preview.png" />
+      </Helmet>
+
+      <main>
+        <div className='r-section'>
+          {projects.map((project, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className={`card ${animate ? "animate" : ""}`}
+              key={index}
+            >
+              <div className='img'>
+                <img src={project.img} alt={project.title} />
               </div>
-              <a href={project.more}><span className='icon-arrow-right'></span></a>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </main>
+              <h3>{project.title}</h3>
+              <p>{project.subtitle}</p>
+              <div className='Git-link-more'>
+                <div>
+                  <a href={project.link}><span className='icon-link'></span></a>
+                  <a href={project.github}><span className='icon-github'></span></a>
+                </div>
+                <a href={project.more}><span className='icon-arrow-right'></span></a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </main>
+    </>
   );
 };
 

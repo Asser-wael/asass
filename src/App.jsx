@@ -1,4 +1,4 @@
-import { useEffect } from 'react'; // ✅ Added missing import
+import { useEffect } from 'react';
 import './App.css';
 import Header from './components/1-Header/Header';
 import Hero from './components/2-hero/Hero';
@@ -10,30 +10,27 @@ import Footer from './components/7-Footer/Footer';
 import Error from './components/errorPage';
 import { ModeProvider } from "./context";
 import { AnimatePresence, motion } from 'framer-motion';
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-  useLocation,
-} from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import './style.css'
 
 /* 🔹 Layout Component */
-function PortfolioLayout() {
+function PortfolioLayout({ children }) {
   return (
     <>
       <Header />
-      <Outlet />
+      {children}
       <Footer />
     </>
   );
 }
 
+/* 🔹 PageTransition Component */
 function PageTransition({ children }) {
-  const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <motion.div key={location.pathname}
+      <motion.div
+        key={window.location.hash} // HashRouter
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -45,62 +42,59 @@ function PageTransition({ children }) {
   );
 }
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <PortfolioLayout />, errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: (
-          <PageTransition>
-            <Hero />
-          </PageTransition>
-        )
-      },
-      {
-        path: "projects",
-        element: (
-          <PageTransition>
-            <Main />
-          </PageTransition>
-        )
-      },
-      {
-        path: "services",
-        element: (
-          <PageTransition>
-            <Services />
-          </PageTransition>
-        )
-      },
-      {
-        path: "skills",
-        element: (
-          <PageTransition>
-            <Skills />
-          </PageTransition>
-        )
-      },
-      {
-        path: "contact",
-        element: (
-          <PageTransition>
-            <Contact />
-          </PageTransition>
-        )
-      }
-    ]
-  }
-]);
-
 function App() {
-
   return (
-    <ModeProvider>
-      <RouterProvider router={router} />
-    </ModeProvider>
+    <HelmetProvider>
+      <ModeProvider>
+        <HashRouter>
+          <PortfolioLayout>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <PageTransition>
+                    <Hero />
+                  </PageTransition>
+                }
+              />
+              <Route
+                path="/projects"
+                element={
+                  <PageTransition>
+                    <Main />
+                  </PageTransition>
+                }
+              />
+              <Route
+                path="/services"
+                element={
+                  <PageTransition>
+                    <Services />
+                  </PageTransition>
+                }
+              />
+              <Route
+                path="/skills"
+                element={
+                  <PageTransition>
+                    <Skills />
+                  </PageTransition>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <PageTransition>
+                    <Contact />
+                  </PageTransition>
+                }
+              />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </PortfolioLayout>
+        </HashRouter>
+      </ModeProvider>
+    </HelmetProvider>
   );
 }
 
