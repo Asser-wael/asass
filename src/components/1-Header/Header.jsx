@@ -8,7 +8,7 @@ import light from "../../icons/weather_16382131.png"
 // import srct from "../../icons/translate.png"
 
 const Header = () => {
-    const { mode, setMode, lang, setLang, active, setactive } = useContext(ModeContext)
+    const { mode, setMode, active, setactive } = useContext(ModeContext)
     const lis = [
         { title: "About", href: "/" },
         { title: "Projects", href: "/projects" },

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './App.css';
 import Header from './components/1-Header/Header';
 import Hero from './components/2-hero/Hero';

@@ -1,5 +1,5 @@
 import './Main.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from "framer-motion";
 import { Helmet } from 'react-helmet-async';
 // استيراد جميع الصور من مجلد src
@@ -88,7 +88,7 @@ const Main = () => {
     }
   ];
 
-  const [animate, setAnimate] = useState(false);
+  const [animate] = useState(false);
 
 
 
