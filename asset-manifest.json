@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/asass/static/css/main.2c6a1422.css",
-    "main.js": "/asass/static/js/main.d31d4aeb.js",
+    "main.js": "/asass/static/js/main.0849c9bc.js",
     "static/media/12.png": "/asass/static/media/12.0959c428cec60ea32820.png",
     "static/media/AI and UI design_ A match made in digital heaven.jpg": "/asass/static/media/AI and UI design_ A match made in digital heaven.d3166c3a0e93ac1357f8.jpg",
     "static/media/Pin af Benjamin Dreux på Ui Design _ Websitedesign, Hjemmeside.jpg": "/asass/static/media/Pin af Benjamin Dreux på Ui Design _ Websitedesign, Hjemmeside.006773b40ab6a3d60dfe.jpg",
@@ -18,10 +18,10 @@
     "static/media/icomoon.ttf?7otst6": "/asass/static/media/icomoon.0582e6fd66acb7900839.ttf",
     "index.html": "/asass/index.html",
     "main.2c6a1422.css.map": "/asass/static/css/main.2c6a1422.css.map",
-    "main.d31d4aeb.js.map": "/asass/static/js/main.d31d4aeb.js.map"
+    "main.0849c9bc.js.map": "/asass/static/js/main.0849c9bc.js.map"
   },
   "entrypoints": [
     "static/css/main.2c6a1422.css",
-    "static/js/main.d31d4aeb.js"
+    "static/js/main.0849c9bc.js"
   ]
 }
