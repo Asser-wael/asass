@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/asass/static/css/main.a0891611.css",
-    "main.js": "/asass/static/js/main.5b5b474b.js",
+    "main.css": "/asass/static/css/main.2c6a1422.css",
+    "main.js": "/asass/static/js/main.d31d4aeb.js",
     "static/media/12.png": "/asass/static/media/12.0959c428cec60ea32820.png",
     "static/media/AI and UI design_ A match made in digital heaven.jpg": "/asass/static/media/AI and UI design_ A match made in digital heaven.d3166c3a0e93ac1357f8.jpg",
     "static/media/Pin af Benjamin Dreux på Ui Design _ Websitedesign, Hjemmeside.jpg": "/asass/static/media/Pin af Benjamin Dreux på Ui Design _ Websitedesign, Hjemmeside.006773b40ab6a3d60dfe.jpg",
@@ -11,13 +11,17 @@
     "static/media/Landing Page_ Fitness trainer homepage.jpg": "/asass/static/media/Landing Page_ Fitness trainer homepage.e2e2aeb10e30bd03ed2a.jpg",
     "static/media/a56488e4-de71-40af-ad68-ed8111933c3e.jpg": "/asass/static/media/a56488e4-de71-40af-ad68-ed8111933c3e.e0fff96dbd031b1e0c60.jpg",
     "static/media/11f3ac83-7b34-446d-941c-73763a295e82.jpg": "/asass/static/media/11f3ac83-7b34-446d-941c-73763a295e82.df06cfc300180277d581.jpg",
+    "static/media/icomoon.svg?7otst6": "/asass/static/media/icomoon.ad5a2fd13a91be5d7819.svg",
     "static/media/moon_4700960.png": "/asass/static/media/moon_4700960.6a39e264e7bd65dd61d6.png",
+    "static/media/icomoon.eot?7otst6": "/asass/static/media/icomoon.30676a5e0d42e50231cc.eot",
+    "static/media/icomoon.woff?7otst6": "/asass/static/media/icomoon.7457db16a17035af5f3e.woff",
+    "static/media/icomoon.ttf?7otst6": "/asass/static/media/icomoon.0582e6fd66acb7900839.ttf",
     "index.html": "/asass/index.html",
-    "main.a0891611.css.map": "/asass/static/css/main.a0891611.css.map",
-    "main.5b5b474b.js.map": "/asass/static/js/main.5b5b474b.js.map"
+    "main.2c6a1422.css.map": "/asass/static/css/main.2c6a1422.css.map",
+    "main.d31d4aeb.js.map": "/asass/static/js/main.d31d4aeb.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0891611.css",
-    "static/js/main.5b5b474b.js"
+    "static/css/main.2c6a1422.css",
+    "static/js/main.d31d4aeb.js"
   ]
 }
